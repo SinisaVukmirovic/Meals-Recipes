@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meals Recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <span>&#127860;</span><h1>Meals Recipes</h1><span>&#127828;</span>   
+    </header>
+
+    <h4 class="manual">Search for meals by category and get their recipes</h4>
+
+    <form>
+        <select name="categories" id="categories">
+            <option selected value="Pasta">Pasta</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Chicken">Chicken</option>
+            <option value="Beef">Beef</option>
+            <option value="Pork">Pork</option>
+            <option value="Starter">Starter</option>
+            <option value="Side">Side</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+        </select>
+        <button type="submit">Get Meals</button>
+    </form>
+     
+    <div class="container">
+        <div id="meals" class="meals"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

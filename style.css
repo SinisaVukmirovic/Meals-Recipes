@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222;
+    color: #eee;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    background-color: greenyellow;
+    color: #222;
+}
+    header h1 {
+        margin: 0 1em;
+    }
+    header span {
+        font-size: 3rem;
+        color: green;
+    }
+        header span:first-child {transform: rotate(-30deg)}
+        header span:last-child {transform: rotate(30deg)}
+
+h4.manual {
+    text-align: center;
+    margin: 1em;
+}
+
+form {
+    width: 80%;
+    max-width: 20rem;
+    margin: 0 auto;
+    display: flex;    
+}
+    form select {
+        flex: 3;
+        padding: .5em 1em;
+        margin: 0 .25em;
+        background-color: greenyellow;
+    }
+    form button {
+        flex: 2;
+        margin: 0 .25em;
+        background-color: green;
+        color: greenyellow;
+        cursor: pointer;
+        outline: none;
+        border: 1px solid greenyellow;
+        transition: filter 250ms;
+    }
+        form button:hover {
+            filter: brightness(120%);
+        }
+
+.container {
+    width: 70%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .container > h4 {
+        text-align: center;
+    }
+    .container button {
+        margin: 1em;
+        padding: .5em 1em;
+        background-color: green;
+        color: greenyellow;
+        font-size: 1.25rem;
+        font-weight: bold;
+        outline: none;
+        border: 1px solid greenyellow;
+        cursor: pointer;
+    }
+
+h3.category {
+    color: greenyellow;
+    margin: 1em;
+}
+
+.meals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    margin: 2em 0;
+}
+    .meal {
+        padding: 8px;
+        border: 1px solid green;
+    }
+    .meal img {
+        width: 100%;
+        height: calc(width * 1px);
+        object-fit: cover;
+    }
+    .meal .name {
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .meal h3 {
+        text-align: center;
+    }
+    .meal a {
+        display: block;
+        padding: .5em;
+        background-color: greenyellow;
+        color: green;
+        text-align: center;
+        text-decoration: none;
+    }
+        .meal a:hover {
+            filter: brightness(90%);
+        }
+
+/* =================== */
+/* recipe page styles */
+/* =================== */
+.recipe {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+}
+    .recipe .pic-info {
+        display: flex;
+        margin-bottom: 2em;
+    }
+        .recipe .img {
+            flex: 3;
+            margin-right: 2em;
+        }
+            .recipe .img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        .recipe .info {
+            flex: 2;
+        }
+            .info h2 {
+                padding: .5em 2em;
+                margin: 2em 0 1em -4em;
+                color: #333;
+                background-color: greenyellow;
+            }
+            .info p {
+                margin: .5em 0;
+            }
+            .info h4 {
+                margin: 1.5em 0 1em 0;
+            }
+            .info ul {
+                margin-left: 2em;
+                color: greenyellow;
+            }
+    
+    .recipe h5 {
+        margin: 0 4em;
+        line-height: 1.75;
+    }
+
+@media only screen and (max-width: 1025px) {
+    .meals {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 824px) {
+    html {
+        font-size: 14px;
+    }
+    .meals {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+        margin: 1em 0;
+    }
+
+    .recipe .pic-info {
+        flex-direction: column;
+    }
+        .recipe .img {
+            margin: 0;
+        }
+        .recipe .info {
+            margin: 0 2em;
+        }
+        .info h2 {
+            margin: -1.5em 2em 1em;
+            color: #333;
+            background-color: greenyellow;
+        }
+        .recipe h5 {
+            margin: 1em 0;
+        }
+}
+
+@media only screen and (max-width: 415px) {
+    html {
+        font-size: 12px;
+    }
+    .container {
+        width: 90%;
+    }
+    .meals {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1em;
+        margin: .5em 0;
+    }
+}
